@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(34, 34, 34, 0.952);
+}
+form {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  border-radius: 25px;
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.2),
+              20px 20px 70px rgba(0, 0, 0, 0.2),
+              inset 10px 10px 20px rgba(0, 0, 0, 0.5),
+              inset -10px -10px 20px rgba(0, 0, 0, 0.5);
+  display: grid;
+  padding: 15px;
+}
+form .value {
+  grid-column: span 4;
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 25px;
+  font-size: 18px;
+  text-align: right;
+  border: 0;
+  outline: none;
+  height: 100px;
+}
+form .num {
+  margin: auto;
+  border: 1px solid #000;
+  color: #fff;
+  border-radius: 10px;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(#2f2f2f, #3f3f3f);
+  box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.25),
+    inset 0 -8px 8px rgba(0, 0, 0, 0.15), 0 0 2px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+form .num:active {
+  filter: brightness(1.5);
+  transform: scale(0.8);
+}
+form .num i {
+  font-style: normal;
+  font-size: 20px;
+  font-weight: bold;
+  user-select: none;
+  z-index: 10;
+}
+form .num::before {
+  border-radius: 10px;
+  content: "";
+  position: absolute;
+  inset: 3px 10px 12px 4px;
+  background: linear-gradient(#2d2d2d, #4d4d4d);
+  box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1),
+    10px 5px 10px rgba(0, 0, 0, 0.1);
+}
+form .num.clear {
+  grid-column: span 2;
+  width: 140px;
+  background: rgba(255, 0, 0, 0.767);
+}
+form .num.clear::before {
+  background: rgba(255, 0, 0, 0.2);
+}
+form .num.plus {
+  grid-row: span 2;
+  height: 140px;
+}
+form .num.equal {
+  background: rgb(0, 204, 255);
+}
+form .num.equal::before {
+  background: rgba(0, 204, 255, 0.726);
+}
+form .value {
+  background: #a8ad7e;
+  width: 90%;
+  margin-block-end: 5px;
+  margin-block-start: 5px;
+  margin-inline: auto;
+}
